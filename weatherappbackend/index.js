@@ -8,7 +8,7 @@ const corsOptions ={
    credentials:true, 
    optionSuccessStatus:200,
 }
-const PORT = 8080;
+//const PORT = 8080;
 
 // Setting up and using cors is required in order
 // to get requests form this REST API.
@@ -16,7 +16,7 @@ app.use(cors(corsOptions))
 
 // This line starts the server 
 app.listen(
-    PORT,
+    process.env.PORT,
     () => console.log('Server is live!')
 );
 
